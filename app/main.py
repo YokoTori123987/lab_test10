@@ -15,3 +15,4 @@ async def root():
 
 app.include_router(api_router, prefix=config.settings.prefix)
 handler = Mangum(app)
+# งง
