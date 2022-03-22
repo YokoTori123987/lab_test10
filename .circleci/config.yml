@@ -10,17 +10,17 @@ jobs:
       tag: "3.8"
     steps:
       - checkout
-      - run:
-          name: Setup Virtual env
-          command:
-            virtualenv -p python3.8 env
-            echo "source ./env/bin/activate" >> $BASH_ENV
+      # - run:
+      #     name: Setup Virtual env
+      #     command:
+      #       virtualenv -p python3.8 env
+      #       echo "source ./env/bin/activate" >> $BASH_ENV
       - run:
           name: Install Dependencies
           command: pip install -r requirements.txt
-      - run:
-          name: Create ENV file
-          command: env > .env
+      # - run:
+      #     name: Create ENV file
+      #     command: env > .env
       - run:
           name: Test
           command: pytest
